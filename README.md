@@ -19,7 +19,7 @@ A business owner or entrepreneur who is managing a team of developers to build s
 
 There are three paths to start if one does not want to start from scratch. ACTUS is the [Algorithmic Contract Types Unified Standards organization](https://www.actusfrf.org/) and provides a useful but complex scaffolding for financial contract standardization that is years ahead of the current sophistication of Decentralized Finance. Templates and Libraries exist from Catalyst funding and open source contribution. The official Real World Marlowe looks at sample contracts of which the ten most important are featured here.
 
-(1) NFT/FT sale for ADA
+### (1) NFT/FT sale for ADA
 A Simple Sale of a Token
 The simplest token sale is the exchange of a token for Ada.
 This example consists of five transactions:
@@ -29,7 +29,10 @@ This example consists of five transactions:
 + Christopher Marlowe withdraws his 50 Ada from Marlowe's role-payout address.
 + Jane Lumley withdraws her 1 BearGarden from Marlowe' role-payout address.
 
-(2) NFT/FT sale for Stablecoin
+![Sale4Ada](https://github.com/Fugu18/marlowe-finance/blob/main/images/NFT%20sale%20of%20token%20for%20ada.png)
+
+
+### (2) NFT/FT sale for Stablecoin
 This token sale exchanges a token for either the Djed or iUSD stablecoins.
 This example consists of five transactions:
 + Christopher Marlowe creates the token-sale Marlowe contract.
@@ -38,7 +41,10 @@ This example consists of five transactions:
 + Christopher Marlowe withdraws his 50 Djed from Marlowe's role-payout address.
 + Jane Lumley withdraws her 1 BearGarden from Marlowe' role-payout address.
 
-(3) NFT/FT Sale of a Token with Royalties
+![Sale4Stablecoin](https://github.com/Fugu18/marlowe-finance/blob/main/images/NFT%20sale%20of%20token%20for%20stablecoin.png)
+
+
+### (3) NFT/FT Sale of a Token with Royalties
 This token sale exchanges a token for either the iUSD stablecoins and pays a royalty to the NFT artist. See CIP-27 for more information about NFT royalties in Cardano.
 This example consists of six transactions:
 + Christopher Marlowe creates the token-sale Marlowe contract.
@@ -48,7 +54,10 @@ This example consists of six transactions:
 + Jane Lumley withdraws her 1 BearGarden from Marlowe's role-payout address.
 + Elizabeth Cary withdraws her 0.175 iUSD royalty from Marlowe's role-payout address.
 
-(4) Swap of tokens
+![SaleRoyalties](https://github.com/Fugu18/marlowe-finance/blob/main/images/NFT%20sale%20of%20token%20with%20royalties.png)
+
+
+### (4) Swap of tokens
 This contract swaps one type of token for another.
 This example consists of four transactions:
 + Francis Beaumont creates the token-sale Marlowe contract.
@@ -57,7 +66,10 @@ This example consists of four transactions:
 + Francis Beaumeont withdraws his 300 Swan tokens from Marlowe's role-payout address.
 + John Webster withdraws his 500 Globe tokens from Marlowe's role-payout address.
 
-(5) Airdrop of token
+![Tokenswap](https://github.com/Fugu18/marlowe-finance/blob/main/images/NFT%20swap%20of%20tokens.png)
+
+
+### (5) Airdrop of token
 This mini-airdrop of tokens to five parties illustrates the difficulties of making multiple payments in the same Marlowe transaction: the limit on Plutus execution costs forces the five payments to be split into two transactions.
 This example consists of nine transactions:
 + Christopher Marlowe creates the airdrop Marlowe contract.
@@ -70,7 +82,10 @@ This example consists of nine transactions:
 + Jane Lumley withdraws her 100 BearGarden tokens from the Marlowe payout address.
 + John Webster withdraws his 100 BearGarden tokens from the Marlowe payout address.
 
-(6) NFT Shared Ownership
+![Airdrop](https://github.com/Fugu18/marlowe-finance/blob/main/images/Token%20airdrop.png)
+
+
+### (6) NFT Shared Ownership
 Shared Purchase of an NFT, with an Option to Buy Out Other Co-Owners
 Three parties contribute equal amounts towards the purchase of a NFT that they jointly own. At any time, one of them may pay the other two the value of the token so that they can have the token all for themselves.
 
@@ -84,8 +99,10 @@ Three parties contribute equal amounts towards the purchase of a NFT that they j
 + Jane Lumley withdraws 150 Ada from the Marlowe payout address.
 + Mary Herbert withdraws 1 BearGarden tokens from the Marlowe payout address.
 
+![SharedOwn](https://github.com/Fugu18/marlowe-finance/blob/main/images/NFT%20shared%20ownership.png)
 
-(7) NFT/FT Loan Collateral
+
+### (7) NFT/FT Loan Collateral
 A Bullet Loan with an NFT as Collateral
 The party borrows 90 Djed with a BearGarden token as collateral; after they pay back the 90 Djed principal and 10 Djed interest to the counterparty, they receive their BearGarden token back. If they do not pay before the deadline, the counterparty keeps their BearGarden token.
 
@@ -99,8 +116,10 @@ This example consists of seven transactions:
 + Elizabeth Cary withdraws her 1 BearGarden token from Marlowe's role-payout address.
 + Mary Herbet withdraws her 100 Djed from Marlowe's role-payout address.
 
+![LoanCollateral](https://github.com/Fugu18/marlowe-finance/blob/main/images/NFT%20loan%20collateral.png)
 
-(8) NFT/FT Pawn for stablecoin
+
+### (8) NFT/FT Pawn for stablecoin
 Pawning an NFT for iUSD
 The party receives 100 iUSD for pawning a BearGarden token as collateral; if they pay back the 100 iUSD, they receive their BearGarden token back. However, at any time before such a redemption, the counterparty may decide to keep the BearGarden token.
 
@@ -113,8 +132,10 @@ This example consists of six transactions:
 + Later, Mary Herbert chooses to have the token withdrawn from the contract, depriving Elizabeth Cary of the chance to repay the 100 iUSD and receive her token back.
 + Mary Herbert withdraws her 1 BearGarden token from Marlowe's role-payout address.
 
+![PawnStablecoin](https://github.com/Fugu18/marlowe-finance/blob/main/images/NFT%20pawning%20for%20stablecoin.png)
 
-(9) Token Sale with Oracle
+
+### (9) Token Sale with Oracle
 This token sale uses a price oracle to set the cost of the tokens.
 This example consists of six transactions:
 + John Webster creates the token-sale Marlowe contract.
@@ -124,8 +145,10 @@ This example consists of six transactions:
 + John Webster withdraws his lovelace from Marlowe's role-payout address.
 + Elizabeth withdraws her 1,000,000 HOSKY from Marlowe' role-payout address.
 
+![Oracle](https://github.com/Fugu18/marlowe-finance/blob/main/images/NFT%20token%20sale%20with%20oracle.png)
 
-(10) English Auction
+
+### (10) English Auction
 This English Auction with five bidders and three rounds of bidding demonstrates the use of merkleization for Marlowe contracts. Because bidders may bid in any order and may bid more than once, unless they are disqualified by an illegal bid or timeout, the contract involves a combinatorial explosion of possibilities. Without merkleization, the contract JSON file is 990MB in size and contains 940k Case statements, but after merkleization the JSON file is 9.8MB and it contains just 1150 merkleized Case statements.
 
 Characteristic of this contract
