@@ -3,6 +3,8 @@ Modular Marlowe for DeFi primitives, finance and trading use cases.
 
 We follow the journey of the **Citizen Developer** to learn how Cardano's Domain Specific Language [Marlowe](https://marlowe.iohk.io/) can be used to safely and simply deploy financial smart contracts to the blockchain.
 
+![CD](https://github.com/Fugu18/marlowe-finance/blob/main/images/citizen-developer.png)
+
 *Web3 User Journey*
 A DApp user who fulfills their role as a participant in a contract transaction. Connects their wallet to a specific DApp. 
 
