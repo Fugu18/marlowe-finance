@@ -24,6 +24,7 @@ There are three paths to start if one does not want to start from scratch. ACTUS
 
 ### (A) Escrow
 Regulates a money exchange between a "Buyer" and a "Seller". If there is a disagreement, a "Mediator" will decide whether the money is refunded or paid to the "Seller".
+
 [Escrow as Marlowe](https://github.com/Fugu18/marlowe-finance/blob/main/marlowe/escrow.marlowe)
 
 ### (B) Escrow with Collateral
@@ -32,22 +33,27 @@ Regulates a money exchange between a "Buyer" and a "Seller" using a collateral f
 
 ### (C) Zero Coupon Bond
 A simple loan. The investor pays the issuer the discounted price at the start, and is repaid the full (notional) price at the end.
+
 [Zero Coupon Bond as Marlowe](https://github.com/Fugu18/marlowe-finance/blob/main/marlowe/zcbond.marlowe)
 
 ### (D) Coupon Bond Guaranteed
 Debt agreement between an "Lender" and an "Borrower". "Lender" will advance the "Principal" amount at the beginning of the contract, and the "Borrower" will pay back "Interest instalment" every 30 slots and the "Principal" amount by the end of 3 instalments. The debt is backed by a collateral provided by the "Guarantor" which will be refunded as long as the "Borrower" pays back on time.
+
 [Coupon Bond Guaranteed as Marlowe](https://github.com/Fugu18/marlowe-finance/blob/main/marlowe/guaranteed_bond.marlowe)
 
 ### (E) Dollar Swap
 Takes Ada from one party and dollar tokens from another party, and it swaps them atomically.
+
 [Dollar Swap as Marlowe](https://github.com/Fugu18/marlowe-finance/blob/main/marlowe/swap.marlowe)
 
 ### (F) Contract for Differences
 "Party" and "Counterparty" deposit 100 Ada and after 60 slots is redistributed depending on the change in a given trade price reported by "Oracle". If the price increases, the difference goes to "Counterparty"; if it decreases, the difference goes to "Party", up to a maximum of 100 Ada.
+
 [CFD as Marlowe](https://github.com/Fugu18/marlowe-finance/blob/main/marlowe/cfd.marlowe)
 
 ### (G) CFD with Oracle
 "Party" and "Counterparty" deposit 100 Ada and after 60 slots these assets are redistributed depending on the change in price of 100 Ada worth of dollars between the start and the end of the contract. If the price increases, the difference goes to "Counterparty"; if it decreases, the difference goes to "Party", up to a maximum of 100 Ada.
+
 [CFD with Oracle as Marlowe](https://github.com/Fugu18/marlowe-finance/blob/main/marlowe/cfd_oracle.marlowe)
 
 
