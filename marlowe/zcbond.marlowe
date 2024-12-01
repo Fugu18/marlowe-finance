@@ -1,0 +1,22 @@
+When [
+  (Case
+     (Deposit (Role "Lender") (Role "Lender")
+        (Token "" "")
+        (ConstantParam "Amount"))
+     (Pay (Role "Lender")
+        (Party (Role "Borrower"))
+        (Token "" "")
+        (ConstantParam "Amount")
+        (When [
+           (Case
+              (Deposit (Role "Borrower") (Role "Borrower")
+                 (Token "" "")
+                 (AddValue
+                    (ConstantParam "Interest")
+                    (ConstantParam "Amount")))
+              (Pay (Role "Borrower")
+                 (Party (Role "Lender"))
+                 (Token "" "")
+                 (AddValue
+                    (ConstantParam "Interest")
+                    (ConstantParam "Amount")) Close))] (TimeParam "Payback deadline") Close)))] (TimeParam "Loan deadline") Close

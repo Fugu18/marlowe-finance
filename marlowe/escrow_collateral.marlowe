@@ -1,0 +1,47 @@
+When [
+  (Case
+     (Deposit (Role "Seller") (Role "Seller")
+        (Token "" "")
+        (ConstantParam "Collateral amount"))
+     (When [
+        (Case
+           (Deposit (Role "Buyer") (Role "Buyer")
+              (Token "" "")
+              (ConstantParam "Collateral amount"))
+           (When [
+              (Case
+                 (Deposit (Role "Seller") (Role "Buyer")
+                    (Token "" "")
+                    (ConstantParam "Price"))
+                 (When [
+                       (Case
+                          (Choice
+                             (ChoiceId "Everything is alright" (Role "Buyer")) [
+                             (Bound 0 0)]) Close)
+                       ,
+                       (Case
+                          (Choice
+                             (ChoiceId "Report problem" (Role "Buyer")) [
+                             (Bound 1 1)])
+                          (Pay (Role "Seller")
+                             (Account (Role "Buyer"))
+                             (Token "" "")
+                             (ConstantParam "Price")
+                             (When [
+                                   (Case
+                                      (Choice
+                                         (ChoiceId "Confirm problem" (Role "Seller")) [
+                                         (Bound 1 1)]) Close)
+                                   ,
+                                   (Case
+                                      (Choice
+                                         (ChoiceId "Dispute problem" (Role "Seller")) [
+                                         (Bound 0 0)])
+                                      (Pay (Role "Seller")
+                                         (Party (Address "addr_test1vqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqd9tg5t"))
+                                         (Token "" "")
+                                         (ConstantParam "Collateral amount")
+                                         (Pay (Role "Buyer")
+                                            (Party (Address "addr_test1vqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqd9tg5t"))
+                                            (Token "" "")
+                                            (ConstantParam "Collateral amount") Close)))] (TimeParam "Complaint deadline") Close)))] (TimeParam "Dispute by buyer timeout") Close))] (TimeParam "Deposit of price by buyer timeout") Close))] (TimeParam "Deposit of collateral by buyer timeout") Close))] (TimeParam "Collateral deposit by seller timeout") Close

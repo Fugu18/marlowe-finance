@@ -1,0 +1,71 @@
+When [
+  (Case
+     (Deposit (Role "Lender") (Role "Guarantor")
+        (Token "" "")
+        (AddValue
+           (MulValue
+              (Constant 3)
+              (ConstantParam "Interest instalment"))
+           (ConstantParam "Principal")))
+     (When [
+        (Case
+           (Deposit (Role "Borrower") (Role "Lender")
+              (Token "" "")
+              (ConstantParam "Principal"))
+           (Pay (Role "Borrower")
+              (Party (Role "Borrower"))
+              (Token "" "")
+              (ConstantParam "Principal")
+              (When [
+                 (Case
+                    (Deposit (Role "Lender") (Role "Borrower")
+                       (Token "" "")
+                       (ConstantParam "Interest instalment"))
+                    (Pay (Role "Lender")
+                       (Party (Role "Lender"))
+                       (Token "" "")
+                       (ConstantParam "Interest instalment")
+                       (Pay (Role "Lender")
+                          (Party (Role "Guarantor"))
+                          (Token "" "")
+                          (ConstantParam "Interest instalment")
+                          (When [
+                             (Case
+                                (Deposit (Role "Lender") (Role "Borrower")
+                                   (Token "" "")
+                                   (ConstantParam "Interest instalment"))
+                                (Pay (Role "Lender")
+                                   (Party (Role "Lender"))
+                                   (Token "" "")
+                                   (ConstantParam "Interest instalment")
+                                   (Pay (Role "Lender")
+                                      (Party (Role "Guarantor"))
+                                      (Token "" "")
+                                      (ConstantParam "Interest instalment")
+                                      (When [
+                                         (Case
+                                            (Deposit (Role "Lender") (Role "Borrower")
+                                               (Token "" "")
+                                               (AddValue
+                                                  (ConstantParam "Interest instalment")
+                                                  (ConstantParam "Principal")))
+                                            (Pay (Role "Lender")
+                                               (Party (Role "Lender"))
+                                               (Token "" "")
+                                               (AddValue
+                                                  (ConstantParam "Interest instalment")
+                                                  (ConstantParam "Principal"))
+                                               (Pay (Role "Lender")
+                                                  (Party (Role "Guarantor"))
+                                                  (Token "" "")
+                                                  (AddValue
+                                                     (ConstantParam "Interest instalment")
+                                                     (ConstantParam "Principal")) Close)))] 1500 Close))))] 1200 Close))))] 900 Close)))] 600
+        (Pay (Role "Lender")
+           (Party (Role "Guarantor"))
+           (Token "" "")
+           (AddValue
+              (MulValue
+                 (Constant 3)
+                 (ConstantParam "Interest instalment"))
+              (ConstantParam "Principal")) Close)))] 300 Close
