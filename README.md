@@ -20,6 +20,53 @@ A business owner or entrepreneur who is managing a team of developers to build s
 There are three paths to start if one does not want to start from scratch. ACTUS is the [Algorithmic Contract Types Unified Standards organization](https://www.actusfrf.org/) and provides a useful but complex scaffolding for financial contract standardization that is years ahead of the current sophistication of Decentralized Finance. Templates and Libraries exist from Catalyst funding and open source contribution. The official Marlowe Playground and Real World Marlowe Repository both look at sample contracts. This is a good place to start.
 
 
+## Getting Started
+What is really nice about Marlowe is its use of Blockly and the [Marlowe Playground](https://playground.marlowe-lang.org/#/) interactive coding and simulation web environment. Some example contracts exist that can be shown as either Blockly blocks (each representing an "operation"), native Marlowe script or JSON. This is a great starting point to gain an intuitive understanding of how Marlowe works and what kind of guarantees it provides compared to writing smart contracts from scratch.
+
+~~~
+When
+    [Case
+        (Deposit
+            (Role "Lender")
+            (Role "Lender")
+            (Token "" "")
+            (ConstantParam "Amount")
+        )
+        (Pay
+            (Role "Lender")
+            (Party (Role "Borrower"))
+            (Token "" "")
+            (ConstantParam "Amount")
+            (When
+                [Case
+                    (Deposit
+                        (Role "Borrower")
+                        (Role "Borrower")
+                        (Token "" "")
+                        (AddValue
+                            (ConstantParam "Interest")
+                            (ConstantParam "Amount")
+                        )
+                    )
+                    (Pay
+                        (Role "Borrower")
+                        (Party (Role "Lender"))
+                        (Token "" "")
+                        (AddValue
+                            (ConstantParam "Interest")
+                            (ConstantParam "Amount")
+                        )
+                        Close 
+                    )]
+                (TimeParam "Payback deadline")
+                Close 
+            )
+        )]
+    (TimeParam "Loan deadline")
+    Close
+~~~
+
+
 ## Marlowe Playground with Examples
 
 ### (A) Escrow
