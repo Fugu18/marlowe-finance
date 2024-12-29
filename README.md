@@ -66,6 +66,10 @@ When
     Close
 ~~~
 
+This can easily be toggled back and forth into blocks, which look like this:
+
+![ZCB](https://github.com/Fugu18/marlowe-finance/blob/main/images/ZCB.png)
+
 
 ## Marlowe Playground with Examples
 
