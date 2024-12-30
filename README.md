@@ -79,7 +79,7 @@ Which can be sent to Simulation or exported as the following JSON:
 with slightly different syntax from the original Marlowe, intended for deployment with JS or TS.
 
 
-## Marlowe Playground with Examples
+# Marlowe Playground with Examples
 
 ### (A) Escrow
 Regulates a money exchange between a "Buyer" and a "Seller". If there is a disagreement, a "Mediator" will decide whether the money is refunded or paid to the "Seller".
