@@ -70,6 +70,14 @@ This can easily be toggled back and forth into blocks, which look like this:
 
 ![ZCB](https://github.com/Fugu18/marlowe-finance/blob/main/images/ZCB.png)
 
+Which can be sent to Simulation or exported as the following JSON:
+
+~~~
+{"when":[{"then":{"token":{"token_name":"","currency_symbol":""},"to":{"party":{"role_token":"Borrower"}},"then":{"when":[{"then":{"token":{"token_name":"","currency_symbol":""},"to":{"party":{"role_token":"Lender"}},"then":"close","pay":{"and":0,"add":0},"from_account":{"role_token":"Borrower"}},"case":{"party":{"role_token":"Borrower"},"of_token":{"token_name":"","currency_symbol":""},"into_account":{"role_token":"Borrower"},"deposits":{"and":0,"add":0}}}],"timeout_continuation":"close","timeout":1735584415483},"pay":0,"from_account":{"role_token":"Lender"}},"case":{"party":{"role_token":"Lender"},"of_token":{"token_name":"","currency_symbol":""},"into_account":{"role_token":"Lender"},"deposits":0}}],"timeout_continuation":"close","timeout":1735582615483}
+~~~
+
+with slightly different syntax from the original Marlowe, intended for deployment with JS or TS.
+
 
 ## Marlowe Playground with Examples
 
