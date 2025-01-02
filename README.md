@@ -19,6 +19,9 @@ A business owner or entrepreneur who is managing a team of developers to build s
 
 There are three paths to start if one does not want to start from scratch. ACTUS is the [Algorithmic Contract Types Unified Standards organization](https://www.actusfrf.org/) and provides a useful but complex scaffolding for financial contract standardization that is years ahead of the current sophistication of Decentralized Finance. Templates and Libraries exist from Catalyst funding and open source contribution. The official Marlowe Playground and Real World Marlowe Repository both look at sample contracts. This is a good place to start.
 
+## Mission
+It is important to me that DeFi projects migrating from other blockchains and traditional finance can easily understand and deploy Marlowe for their projects. [Marlowe 2025](https://projectcatalyst.io/funds/13/f13-cardano-use-cases-concept/marlowe-2025-marlowe-v2) was funded in Catalyst Fund-13 and this will start the exciting new "V2" phase of Marlowe as an easy-to-deploy Domain Specific Language. Existing Catalyst community projects from previous funds and their compatibility with the Marlowe 2025 stack will be introduced and discussed as well.
+
 
 ## Getting Started
 What is really nice about Marlowe is its use of Blockly and the [Marlowe Playground](https://playground.marlowe-lang.org/#/) interactive coding and simulation web environment. Some example contracts exist that can be shown as either Blockly blocks (each representing an "operation"), native Marlowe script or JSON. This is a great starting point to gain an intuitive understanding of how Marlowe works and what kind of guarantees it provides compared to writing smart contracts from scratch.
