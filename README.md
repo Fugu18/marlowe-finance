@@ -14,7 +14,7 @@ A developer working with code and the Marlowe DSL language. Uses the Playground 
 *DApp developer journey*
 A developer working with code and the Marlowe DSL language. Uses developer tools such as the prototype example DApps and TS-SDK. The prototype examples offer guidance on ways to implement DApp functionality.
 
-**Builder (citizen developer) journey
+**Builder (citizen developer) journey:
 A business owner or entrepreneur who is managing a team of developers to build smart contracts and DApps. 
 Lines up all the pieces to make a project happen. 
 Needs to understand the big picture.**
