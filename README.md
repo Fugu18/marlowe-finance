@@ -15,7 +15,9 @@ A developer working with code and the Marlowe DSL language. Uses the Playground 
 A developer working with code and the Marlowe DSL language. Uses developer tools such as the prototype example DApps and TS-SDK. The prototype examples offer guidance on ways to implement DApp functionality.
 
 **Builder (citizen developer) journey
-A business owner or entrepreneur who is managing a team of developers to build smart contracts and DApps. Lines up all the pieces to make a project happen. Needs to understand the big picture.**
+A business owner or entrepreneur who is managing a team of developers to build smart contracts and DApps. 
+Lines up all the pieces to make a project happen. 
+Needs to understand the big picture.**
 
 There are three paths to start if one does not want to start from scratch. ACTUS is the [Algorithmic Contract Types Unified Standards organization](https://www.actusfrf.org/) and provides a useful but complex scaffolding for financial contract standardization that is years ahead of the current sophistication of Decentralized Finance. Templates and Libraries exist from Catalyst funding and open source contribution. The official Marlowe Playground and Real World Marlowe Repository both look at sample contracts. This is a good place to start.
 
