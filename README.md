@@ -9,6 +9,7 @@ Modular Marlowe for DeFi primitives, finance and trading use cases.
 
 *Governed by:* [**MARLOWE LANGUAGE CIC**](https://find-and-update.company-information.service.gov.uk/company/16010921)
 
+### Purpose of Marlowe for Finance
 
 We follow the journey of the **Citizen Developer** to learn how Cardano's Domain Specific Language [Marlowe](https://marlowe.iohk.io/) can be used to safely and simply deploy financial smart contracts to the blockchain.
 
