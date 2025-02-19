@@ -1,6 +1,11 @@
 # marlowe-finance
 Modular Marlowe for DeFi primitives, finance and trading use cases.
 
+**Marlowe is now a fully community-led project**
+[Special Interest Group Github](https://github.com/marlowe-foundation/org/blob/main/sig-charter.md)
+[Fortnightly Call - Discord Link](https://discord.com/events/826816523368005654/1316801221604016158)
+Governed by [**MARLOWE LANGUAGE CIC**](https://find-and-update.company-information.service.gov.uk/company/16010921)
+
 We follow the journey of the **Citizen Developer** to learn how Cardano's Domain Specific Language [Marlowe](https://marlowe.iohk.io/) can be used to safely and simply deploy financial smart contracts to the blockchain.
 
 ![CD](https://github.com/Fugu18/marlowe-finance/blob/main/images/citizen-developer.png)
