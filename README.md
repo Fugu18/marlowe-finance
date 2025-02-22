@@ -34,6 +34,18 @@ There are three paths to start if one does not want to start from scratch. ACTUS
 ## Mission
 It is important to me that DeFi projects migrating from other blockchains and traditional finance can easily understand and deploy Marlowe for their projects. [Marlowe 2025](https://projectcatalyst.io/funds/13/f13-cardano-use-cases-concept/marlowe-2025-marlowe-v2) was funded in Catalyst Fund-13 and this will start the exciting new "V2" phase of Marlowe as an easy-to-deploy Domain Specific Language. Existing Catalyst community projects from previous funds and their compatibility with the Marlowe 2025 stack will be introduced and discussed as well.
 
+***
+
+## Overview of Contents
+
+### Introduction to Cardano and Marlowe within it
+### Marlowe teasers, syntax and Playground
+### Dependencies, Requirements and Setup
+### Building FinTx DApps with Marlowe
+### Overview of Financial Products and DeFi
+### Deploying FinTx on Cardano with Marlowe
+
+***
 
 ## Getting Started
 What is really nice about Marlowe is its use of Blockly and the [Marlowe Playground](https://playground.marlowe-lang.org/#/) interactive coding and simulation web environment. Some example contracts exist that can be shown as either Blockly blocks (each representing an "operation"), native Marlowe script or JSON. This is a great starting point to gain an intuitive understanding of how Marlowe works and what kind of guarantees it provides compared to writing smart contracts from scratch.
