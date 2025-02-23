@@ -62,12 +62,16 @@ Pre-built contract templates for common financial use cases
 
 
 ### Marlowe teasers, syntax and Playground
+Covers what new users can expect from a Cardano DSL and Marlowe in particular, with Google Blockly visual programming editor making code creation inside Marlowe Playground extremely easy and safe. We look at the types of constructs (blocks) available, how they translate back and forth into Marlowe synatx or JSON, how to simulate your newly created smart contracts, and what this means for use cases.
 
 ### Dependencies, Requirements and Setup
+We look at the possible user setups and installations recommended for deploying on Cardano, taking advantage of plug-and-play infrastructure or running our own node.
 
 ### Building FinTx DApps with Marlowe
+As our focus is Marlowe for Finance, we spend some time establishing the framework for building financial applications with Marlowe. Despite it's recent shift to dApp development in general, the DSL was originally intended to limit itself to financial contracts and excel at those. Roles, currencies, timeouts and the account model make building with Marlowe a lot easier on Cardano, as long as we stick to what the language was intended for in the first place.
 
 ### Overview of Financial Products and DeFi
+After a solid understanding of the basics has been established, we survey the worlds of Decentralized Finance and TradFi, and see where innovation, underserved customers and Marlowe's particular strengths create ideal condition for projects using Marlowe. We also discuss some forward-looking and novel use cases and more sophisticated financial contracts and how they could add value to the Cardano ecosystem.
 
 ### Deploying FinTx on Cardano with Marlowe
 
