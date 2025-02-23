@@ -62,9 +62,13 @@ Pre-built contract templates for common financial use cases
 
 
 ### Marlowe teasers, syntax and Playground
+
 ### Dependencies, Requirements and Setup
+
 ### Building FinTx DApps with Marlowe
+
 ### Overview of Financial Products and DeFi
+
 ### Deploying FinTx on Cardano with Marlowe
 
 ***
