@@ -71,9 +71,10 @@ We look at the possible user setups and installations recommended for deploying 
 As our focus is Marlowe for Finance, we spend some time establishing the framework for building financial applications with Marlowe. Despite it's recent shift to dApp development in general, the DSL was originally intended to limit itself to financial contracts and excel at those. Roles, currencies, timeouts and the account model make building with Marlowe a lot easier on Cardano, as long as we stick to what the language was intended for in the first place.
 
 ### Overview of Financial Products and DeFi
-After a solid understanding of the basics has been established, we survey the worlds of Decentralized Finance and TradFi, and see where innovation, underserved customers and Marlowe's particular strengths create ideal condition for projects using Marlowe. We also discuss some forward-looking and novel use cases and more sophisticated financial contracts and how they could add value to the Cardano ecosystem.
+After a solid understanding of the basics has been established, we survey the worlds of Decentralized Finance and TradFi, and see where innovation, underserved customers and Marlowe's particular strengths create ideal condition for projects using Marlowe. Contains theory about financial derivatives and popular DeFi ideas, trading and fintech decentralized applications. We also discuss some forward-looking and novel use cases and more sophisticated financial contracts and how they could add value to the Cardano ecosystem.
 
 ### Deploying FinTx on Cardano with Marlowe
+This section combines the foundational information and theory into practical advice and examples how Marlowe can be used to simplify financial interactions on Cardano. This also examines existing resources from previous Catalyst funding projects and contributions from IOG Marlowe team members to open source repositories, such as JSON-format code snippets, sample code and ACTUS financial contracts as code.
 
 ***
 
