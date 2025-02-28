@@ -2,7 +2,7 @@
 
 Modular Marlowe for DeFi primitives, finance and trading use cases.
 
-This repository contains code snippets, background information and files for the educational series "Marlowe for Finance". The series covers the use of Cardano's Domain Specific Language *MARLOWE* for non-technical financial users for whom the DSL was originally intended for. As Marlowe is transitioning to an "out of the box / batteries included" easy & secure Special Purpose Language for the development of decentralized Apps, we also cover the latest tools and future plans for example Typescript capabilities, Oracle integration and micropayments, as they are very useful for financial applications as well and expand or simplify functionality for the target user.
+This repository contains code snippets, background information and files for the educational series Marlowe for Finance. The series covers the use of Cardano's Domain Specific Language *MARLOWE* for non-technical financial users for whom the DSL was originally intended for. As Marlowe is transitioning to an easy and more secure Special Purpose Language for the development of decentralized Apps, we also cover the latest tools and future plans for example Typescript capabilities, Oracle integration and micropayments, as they are very useful for financial applications as well and expand or simplify functionality for the target user.
 
 **Marlowe is now a fully community-led project**
 
