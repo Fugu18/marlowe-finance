@@ -1,3 +1,14 @@
+## User, Node and CLI Setup
+
+### Creating a dedicated Cardano User
+
+```
+sudo adduser cardano
+sudo usermod -aG sudo cardano
+sudo su – cardano
+```
+
+### Preparing node installation
 ~~~
 sudo apt-get update -y
 sudo apt-get upgrade -y
@@ -20,8 +31,22 @@ source /home/cardano/.ghcup/env
 ghcup install cabal 3.8.1.0
 ghcup set cabal 3.8.1.0
 cabal update
-cabal --version 
+ghcup install ghc 8.10.7
 ~~~
+
+Updating to the desired version of Cardano Node
+```
+CARDANO_NODE_VERSION='XX.Y.Z'
+IOHKNIX_VERSION=$(curl https://raw.githubusercontent.com/IntersectMBO/cardano-node/$CARDANO_NODE_VERSION/flake.lock | jq -r '.nodes.iohkNix.locked.rev')
+echo "iohk-nix version: $IOHKNIX_VERSION"
+```
+
+We need to install several packages required for the node to run:
+
+```
+SODIUM_VERSION=$(curl https://raw.githubusercontent.com/input-output-hk/iohk-nix/$IOHKNIX_VERSION/flake.lock | jq -r '.nodes.sodium.original.rev')
+echo "Using sodium version: $SODIUM_VERSION"
+```
 
 ~~~
 git clone https://github.com/input-output-hk/marlowe-cardano.git
