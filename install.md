@@ -1,30 +1,30 @@
 ## Creating and Funding Wallets
 
-(1) Lace Wallet
+**1. Lace Wallet**
 
 One-stop wallet integrating all tokens, NFTs and dApps from Cardano founding entity Input Output Global. The popular open source, community-built NAMI wallet is now part of Lace.
 
 [Lace Browser Plugin](https://chromewebstore.google.com/detail/lace/gafhhkghbfjjkeiendhlofajokpaflmk?hl=en)
 
-(2) Yoroi Wallet
+**2. Yoroi Wallet**
 
 Built by another Cardano founding entity, Emurgo, the legacy Yoroi Wallet is a self custodial open-source light wallet built in the open for the Cardano ecosystem. The level of transparency enhances its security.
 
 [Yoroi Browser Plugin](https://chromewebstore.google.com/detail/yoroi/ffnbelfdoeiohenkjibnmadjiehjhajb)
 
-(3) Eternl Wallet
+**3. Eternl Wallet**
 
 The Cardano light wallet. Built by Tastenkunst GmbH, one of the major Cardano wallets implementing features requested by the Cardano community.
 
 [Eternl Browser Plugin](https://chromewebstore.google.com/detail/eternl/kmhcihpebfmpgmihbkipmjlmmioameka)
 
-***
+---
 
 Fund your wallets with test-ADA (no value IRL!!!) to safely and cheaply test your smart contracts outside sim, in close-to-production blockchain environments.
 
 [Cardano Testnets Faucet](https://docs.cardano.org/cardano-testnets/tools/faucet)
 
-***
+---
 
 
 ## User, Node and CLI Setup
