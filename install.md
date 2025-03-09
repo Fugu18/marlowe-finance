@@ -63,19 +63,30 @@ cabal update
 ghcup install ghc 8.10.7
 ~~~
 
+
+### Node installation
+
 Updating to the desired version of Cardano Node
+
 ```
 CARDANO_NODE_VERSION='XX.Y.Z'
 IOHKNIX_VERSION=$(curl https://raw.githubusercontent.com/IntersectMBO/cardano-node/$CARDANO_NODE_VERSION/flake.lock | jq -r '.nodes.iohkNix.locked.rev')
 echo "iohk-nix version: $IOHKNIX_VERSION"
 ```
 
-We need to install several packages required for the node to run:
+We need to install several packages required for the node to run. We will set up a source folder 'src' for this purpose.
+
+```
+mkdir src
+cd src
+```
 
 ```
 SODIUM_VERSION=$(curl https://raw.githubusercontent.com/input-output-hk/iohk-nix/$IOHKNIX_VERSION/flake.lock | jq -r '.nodes.sodium.original.rev')
 echo "Using sodium version: $SODIUM_VERSION"
 ```
+
+### Installing Marlowe CLI
 
 ~~~
 git clone https://github.com/input-output-hk/marlowe-cardano.git
