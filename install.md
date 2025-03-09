@@ -81,10 +81,18 @@ mkdir src
 cd src
 ```
 
+Sodium or Libsodium is a powerful cryptography library that is a portable, cross-compilable, installable, and packageable fork of NaCl, a famous cryptographic tool designed by Prof. D.J. Bernstein.
+
 ```
 SODIUM_VERSION=$(curl https://raw.githubusercontent.com/input-output-hk/iohk-nix/$IOHKNIX_VERSION/flake.lock | jq -r '.nodes.sodium.original.rev')
 echo "Using sodium version: $SODIUM_VERSION"
 ```
+
+We will also be needing Secp256k1, the software providing logic for the elliptic curve used for UTxO to implement its public key cryptography (from Bitcoin).
+
+```
+```
+
 
 ### Installing Marlowe CLI
 
