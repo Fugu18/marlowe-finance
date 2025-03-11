@@ -66,7 +66,16 @@ ghcup install ghc 8.10.7
 
 ### Node installation
 
-Updating to the desired version of Cardano Node
+Updating to the desired version of Cardano Node (change this from current XX.Y.Z format to for example '10.4.1')
+
+References:
+
+[POOLTOOL.IO - Currently used versions by peers](https://pooltool.io/networkhealth)
+
+[Official Node GitHub from Intersect MBO](https://github.com/IntersectMBO/cardano-node)
+
+This needs to be modified in the code snippets twice, the one below and again for the Git checkout.
+Let's start.
 
 ```
 CARDANO_NODE_VERSION='XX.Y.Z'
@@ -161,6 +170,58 @@ sudo chmod u=rw,go=r /usr/local/{lib/{libblst.a,pkgconfig/libblst.pc},include/{b
 
 After these dependencies have been installed, we can restart our terminal and proceed to install the Cardano node. We do not need to decide yet which network we want to run, and can later set up mainnet, Preprod or Preview testnets in separate folders.
 
+```
+cd ~/src
+git clone https://github.com/intersectmbo/cardano-node.git
+cd cardano-node
+git checkout tags/<TAGGED VERSION>
+```
+
+To avoid Haskell version conflicts:
+
+```
+echo "with-compiler: ghc-8.10.7" >> cabal.project.local
+```
+
+Finally, we build the node itself:
+
+```
+cabal update
+cabal build all
+cabal build cardano-cli
+```
+
+Adding the node and CLI commands to the ~/.local/bin directory:
+
+```
+mkdir -p ~/.local/bin
+cp -p "$(./scripts/bin-path.sh cardano-node)" ~/.local/bin/
+cp -p "$(./scripts/bin-path.sh cardano-cli)" ~/.local/bin/
+```
+
+And verify that everything worked as expected and node and Cardano command line interface are ready:
+
+```
+cardano-cli --version
+```
+
+If for some reason this failed, make sure you have the right path and privileges.
+
+```
+ls -l ~/.local/bin/cardano-cli
+ls -l ~/.local/bin/cardano-node
+echo $PATH
+```
+
+Troubleshooting tips:
+
+1. ```export PATH="$HOME/.local/bin:$PATH"```
+2. ```source ~/.bashrc  # or source ~/.zshrc if using zsh```
+3. ```chmod +x ~/.local/bin/cardano-cli```
+4. ```chmod +x ~/.local/bin/cardano-node```
+
+
+```
 
 ### Installing Marlowe CLI
 
