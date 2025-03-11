@@ -81,17 +81,85 @@ mkdir src
 cd src
 ```
 
-Sodium or Libsodium is a powerful cryptography library that is a portable, cross-compilable, installable, and packageable fork of NaCl, a famous cryptographic tool designed by Prof. D.J. Bernstein.
+Sodium or Libsodium is a powerful cryptography library that is a portable, cross-compilable, installable, and packageable fork of NaCl, a famous cryptographic tool designed by [Prof. D.J. Bernstein](https://en.wikipedia.org/wiki/Daniel_J._Bernstein).
 
 ```
 SODIUM_VERSION=$(curl https://raw.githubusercontent.com/input-output-hk/iohk-nix/$IOHKNIX_VERSION/flake.lock | jq -r '.nodes.sodium.original.rev')
 echo "Using sodium version: $SODIUM_VERSION"
 ```
 
-We will also be needing Secp256k1, the software providing logic for the elliptic curve used for UTxO to implement its public key cryptography (from Bitcoin).
+After getting the version tag, we can proceed and install sodium.
 
 ```
+: ${SODIUM_VERSION:='dbb48cc'}
+git clone https://github.com/intersectmbo/libsodium
+cd libsodium
+git checkout $SODIUM_VERSION
+./autogen.sh
+./configure
+make
+make check
+sudo make install
 ```
+
+Finally, we add the path to our .bashrc file:
+
+```
+export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="/usr/local/lib/pkgconfig:$PKG_CONFIG_PATH"
+source ~/.bashrc
+```
+
+We will also need to install Secp256k1 for the Cardano Node, the software providing logic for the elliptic curve used for UTxO to implement its public key cryptography (from Bitcoin). Again, we begin by obtaining the version...
+
+```
+SECP256K1_VERSION=$(curl https://raw.githubusercontent.com/input-output-hk/iohk-nix/$IOHKNIX_VERSION/flake.lock | jq -r '.nodes.secp256k1.original.ref')
+echo "Using secp256k1 version: ${SECP256K1_VERSION}"
+```
+
+...and then installing it (also in our `src` folder):
+
+```
+: ${SECP256K1_VERSION:='v0.3.2'}
+git clone --depth 1 --branch ${SECP256K1_VERSION} https://github.com/bitcoin-core/secp256k1
+cd secp256k1
+./autogen.sh
+./configure --enable-module-schnorrsig --enable-experimental
+make
+make check
+sudo make install
+```
+
+```
+BLST_VERSION=$(curl https://raw.githubusercontent.com/input-output-hk/iohk-nix/master/flake.lock | jq -r '.nodes.blst.original.ref')
+echo "Using blst version: ${BLST_VERSION}"
+```
+
+```
+: ${BLST_VERSION:='v0.3.11'}
+git clone --depth 1 --branch ${BLST_VERSION} https://github.com/supranational/blst
+cd blst
+./build.sh
+cat > libblst.pc << EOF
+prefix=/usr/local
+exec_prefix=\${prefix}
+libdir=\${exec_prefix}/lib
+includedir=\${prefix}/include
+
+Name: libblst
+Description: Multilingual BLS12-381 signature library
+URL: https://github.com/supranational/blst
+Version: ${BLST_VERSION#v}
+Cflags: -I\${includedir}
+Libs: -L\${libdir} -lblst
+EOF
+sudo cp libblst.pc /usr/local/lib/pkgconfig/
+sudo cp bindings/blst_aux.h bindings/blst.h bindings/blst.hpp  /usr/local/include/
+sudo cp libblst.a /usr/local/lib
+sudo chmod u=rw,go=r /usr/local/{lib/{libblst.a,pkgconfig/libblst.pc},include/{blst.{h,hpp},blst_aux.h}}
+```
+
+After these dependencies have been installed, we can restart our terminal and proceed to install the Cardano node. We do not need to decide yet which network we want to run, and can later set up mainnet, Preprod or Preview testnets in separate folders.
 
 
 ### Installing Marlowe CLI
