@@ -221,7 +221,6 @@ Troubleshooting tips:
 4. ```chmod +x ~/.local/bin/cardano-node```
 
 
-```
 
 ### Installing Marlowe CLI
 
