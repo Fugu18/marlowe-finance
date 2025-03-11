@@ -32,9 +32,9 @@ Fund your wallets with test-ADA (no value IRL!!!) to safely and cheaply test you
 ### Creating a dedicated Cardano User
 
 ```
-sudo adduser cardano
-sudo usermod -aG sudo cardano
-sudo su – cardano
+sudo adduser marlowe
+sudo usermod -aG sudo marlowe
+sudo su – marlowe
 ```
 
 ### Preparing node installation
