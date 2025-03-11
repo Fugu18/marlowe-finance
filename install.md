@@ -27,26 +27,25 @@ Fund your wallets with test-ADA (no value IRL!!!) to safely and cheaply test you
 ---
 
 
-## User, Node and CLI Setup
-
-### Creating a dedicated Cardano User
-
-```
-sudo adduser marlowe
-sudo usermod -aG sudo marlowe
-sudo su – marlowe
-```
+## Cardano Node and CLI Setup
 
 ### Preparing node installation
+
+Update packages.
+
 ~~~
 sudo apt-get update -y
 sudo apt-get upgrade -y
 ~~~
 
+Install Linux dependencies if they are not already present:
+
 ~~~
 sudo apt-get install automake build-essential pkg-config libffi-dev libgmp-dev libssl-dev libsystemd-dev zlib1g-dev make g++ tmux git jq wget libncurses-dev libtool autoconf curl python3 htop nload -y
 export LD_LIBRARY_PATH="/usr/local/lib:$LD_LIBRARY_PATH"
 ~~~
+
+Download Haskell which is the underlying programming language for the Cardano blockchain:
 
 ~~~
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
@@ -55,6 +54,8 @@ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 ~~~
 source /home/cardano/.ghcup/env
 ~~~
+
+Set version to match the node's (see Intersect MBO node software link at the bottom in case this changes):
 
 ~~~
 ghcup install cabal 3.8.1.0
