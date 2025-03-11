@@ -230,10 +230,6 @@ cd marlowe-cardano
 cabal install exe:marlowe-cli
 ~~~
 
-*References*
-
-[Mainnet Node](https://book.play.dev.cardano.org/env-mainnet.html)
-
 ~~~
 marlowe-cli : a command-line tool for Marlowe contracts
 
@@ -263,3 +259,9 @@ Low-level commands:
   transaction              Create and submit transactions.
   util                     Miscellaneous utilities.
 ~~~
+
+
+*References*
+
+[Mainnet Node](https://book.play.dev.cardano.org/env-mainnet.html)
+
