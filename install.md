@@ -75,7 +75,10 @@ References:
 
 [Official Node GitHub from Intersect MBO](https://github.com/IntersectMBO/cardano-node)
 
-This needs to be modified in the code snippets twice, the one below and again for the Git checkout.
+[EU01 Cardano Stake Pool Guides](https://cardano-node-installation.stakepool247.eu/)
+
+
+The version of the node you want to install needs to be modified in the code snippets twice, the one below and again for the Git checkout.
 Let's start.
 
 ```
