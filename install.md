@@ -255,7 +255,7 @@ cardano-node run --topology topology.json \
 	--socket-path node.socket \
 	--port 3001 \
 	--config config.json 
-	```
+```
 
 Quering the tip during sync (new terminal):
 
