@@ -225,6 +225,49 @@ Troubleshooting tips:
 4. ```chmod +x ~/.local/bin/cardano-node```
 
 
+### Running the node
+
+For each network, we create a separate folder that will contain the configuration and topography files and the database for the ledger.
+
+```
+mkdir preprod
+cd preprod
+```
+
+Then we need to obtain the config files from IntersectMBO. They are updated to be version agnostic, but if you want preview or mainnet, you need to change the folder in the URL to the respective name (i.e. *xxx/mainnet/xxx*).
+
+```
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/config.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/db-sync-config.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/submit-api-config.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/topology.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/byron-genesis.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/shelley-genesis.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/alonzo-genesis.json
+curl -O -J https://book.play.dev.cardano.org/environments/preprod/conway-genesis.json
+```
+
+After successful installation and download of config files, running the node will start the synchronization process with the current ledger of the chosen network. This may take a while for testnets (hours) and quite long indeed for mainnet (days?). It is recommended to run on a serious machine (32GB RAM and fast internet download speed, SSD). Backing up the *db* folder once synced will allow you to restore the node for future installations or changing your machine without downloading the close to 200GB for mainnet-db again. :-)
+
+```
+cardano-node run --topology topology.json \
+	--database-path db \
+	--socket-path node.socket \
+	--port 3001 \
+	--config config.json 
+	```
+
+Quering the tip during sync (new terminal):
+
+```
+export CARDANO_NODE_SOCKET_PATH="node.socket"
+cardano-cli query tip --testnet-magic 1
+```
+
+--testnet-magic 2 will query preview and *mainnet* the mainnet respectively.
+
+If your node is syncing in line with live peers at 100% sync status, you're ready to submit queries and transactions to the blockchain from your (humble?) workstation.
+
 
 ### Installing Marlowe CLI
 
