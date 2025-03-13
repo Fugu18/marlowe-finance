@@ -266,7 +266,9 @@ cardano-cli query tip --testnet-magic 1
 
 --testnet-magic 2 will query preview and *mainnet* the mainnet respectively.
 
-If your node is syncing in line with live peers at 100% sync status, you're ready to submit queries and transactions to the blockchain from your (humble?) workstation.
+If your node is syncing in line with live peers at 100% sync status, you're ready to submit queries and transactions to the blockchain from your (humble?) workstation. Simply open another terminal window while the node is running, and submit commands like ```cardano-cli query tip $testnet```. The most important transaction that cannpt be carried out from within Marlowe is minting native assets (tokens). You can refer to the Cardano Developers portal for detailed instructions about how to do this on any network:
+
+[Minting native assets using Cardano-CLI](https://developers.cardano.org/docs/native-tokens/minting/)
 
 
 ### Installing Marlowe CLI
