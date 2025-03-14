@@ -25,6 +25,11 @@ https://projectcatalyst.io/funds/11/cardano-use-cases-concept/marlowehub-unifyin
 https://github.com/ErickRomeroDev/marlowe-web-integration/tree/main
 
 
+### Empowering DeSci with Marlowe
+
+https://projectcatalyst.io/funds/13/cardano-open-ecosystem/empowering-desci-with-marlowe-a-free-course-on-real-world-blockchain-applications
+
+
 ### Marlowe Runtime SDKs
 
 https://projectcatalyst.io/funds/10/f10-developer-ecosystem-the-evolution/marlowe-runtime-sdks
